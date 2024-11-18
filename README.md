@@ -2,70 +2,44 @@
 
 ## Descripción
 
-**Norton_SQL** es una aplicación sencilla que permite gestionar bases de datos a través de comandos de **backup** y **restore**, similar a la famosa herramienta **Norton** de MS-DOS. Esta aplicación ejecuta los comandos necesarios de forma automática, permitiendo realizar tareas de gestión de bases de datos de forma más rápida y fácil.
-
-Actualmente, la herramienta está disponible como un **archivo ejecutable `.exe`** que puedes descargar y usar sin necesidad de instalar Python ni configurar un entorno. 
-
-### ¿Cómo funciona?
-
-La aplicación utiliza entradas de usuario para realizar operaciones de **backup** y **restore** de bases de datos. A continuación te explicamos cómo usarla.
+**Norton_SQL** es una aplicación desarrollada en Python que permite gestionar bases de datos mediante comandos de **backup** y **restore**. Inspirada en el antiguo **Norton** de MS-DOS, esta herramienta está diseñada para ser eficiente y fácil de usar. Incluye un **ejecutable (.exe)** para que puedas usarla sin necesidad de instalar Python ni dependencias.
 
 ## Características
 
-- **Backup**: Realiza copias de seguridad de las bases de datos.
-- **Restore**: Restaura bases de datos desde archivos de backup.
-- **Fácil de usar**: Simplemente introduce los datos necesarios y ejecuta el programa.
-- **Interfaz sencilla**: No es necesario tener conocimientos técnicos para usarla.
+- Realiza copias de seguridad (**backup**) de bases de datos.
+- Restaura bases de datos desde archivos de **backup**.
+- Soporta autenticación de usuario mediante campos de nombre de usuario y contraseña.
+- Fácil de usar, solo necesitas ejecutar el archivo `.exe`.
 
-## Requisitos
-
-- **Sistema operativo**: Windows
-- **No es necesario tener Python instalado** ya que se proporciona un ejecutable precompilado.
-
-## Instalación
-
-1. **Descargar el archivo ejecutable**:
+**Ejecuta el archivo .exe**:
    
-   Visita la sección de [releases](https://github.com/Deivincci/norton_sql/releases) en el repositorio y descarga el archivo **`NortonSQL.exe`**.
-
-2. **Ejecutar el archivo**:
-
-   Haz doble clic sobre el archivo **`NortonSQL.exe`** para iniciar la aplicación.
+   Después de la descarga, simplemente haz doble clic en el archivo **`NortonSQL.exe`** para iniciar la aplicación.
 
 ## Uso
 
-### Realizar un Backup
+### Backup
 
-1. **Abrir la aplicación**: Haz doble clic en **`NortonSQL.exe`**.
-2. **Ingresar la base de datos a respaldar**: En el campo de **Base de datos a respaldar**, introduce el nombre exacto de la base de datos.
-3. **Nombrar el archivo de backup**: En el campo **Nombre del archivo de respaldo**, ingresa el nombre que deseas darle al archivo de backup (sin incluir la extensión, el programa la añadirá automáticamente).
-4. **Realizar el Backup**: Haz clic en el botón **Realizar Backup** para completar la operación.
+1. Abre el ejecutable **NortonSQL.exe**.
+2. En el cuadro de **Base de datos a respaldar**, ingresa el nombre exacto de la base de datos.
+3. En el cuadro de **Nombre del archivo de respaldo**, ingresa el nombre con el que quieres guardar el archivo de backup (sin extensión, el programa la añadirá automáticamente).
+4. Haz clic en **Realizar Backup** para crear una copia de seguridad.
 
-### Realizar un Restore
+### Restore
 
-1. **Abrir la aplicación**: Haz doble clic en **`NortonSQL.exe`**.
-2. **Seleccionar el archivo de backup**: En el campo **Archivo a restaurar**, introduce el nombre del archivo de backup (sin la extensión).
-3. **Nombrar la base de datos destino**: En el campo **Nombre de la base de datos destino**, ingresa el nombre de la base de datos en la que deseas restaurar el backup.
-4. **Realizar el Restore**: Haz clic en el botón **Realizar Restore** para completar la operación.
+1. Abre el ejecutable **NortonSQL.exe**.
+2. En el cuadro de **Archivo a restaurar**, ingresa el nombre del archivo de backup (sin extensión).
+3. En el cuadro de **Nombre de la base de datos destino**, ingresa el nombre de la base de datos donde quieres restaurar la copia de seguridad.
+4. Haz clic en **Realizar Restore** para restaurar la base de datos.
 
-### Seguridad
+### Nota de seguridad
 
-La aplicación está configurada para funcionar de manera **local**. Si deseas usarla con una base de datos remota, deberás modificar la ruta de conexión en la configuración.
+Recuerda que esta aplicación está configurada para trabajar de manera local. Actualmente al no disponer de codigo fuente no se puede cambiar el host,pero en cambio
+si tenemos pgadmin4 configurado,el programa detectara gracias a eso la ruta.
+No he incluido el codigo fuente porque aun estoy trabajando en ello,la intencion es añadir mas funcionalidades de manipulacion de bases de datos.
 
-## Captura de Pantalla
+## Capturas de pantalla
 
 ![Descripción de la imagen](https://github.com/Deivincci/norton_sql/blob/main/nortonsql.png?raw=true)
-
-## Desarrollo
-
-El código fuente está siendo **reescrito** para agregar nuevas funcionalidades. Si estás interesado en colaborar o ver cómo funciona el código, revisa los archivos en el repositorio y contribuye con sugerencias.
-
-Actualmente, el código fuente incluye:
-
-- Gestión de entradas del usuario (nombre de la base de datos, nombre del archivo de backup).
-- Ejecución de comandos de terminal para realizar operaciones de backup y restore.
-
-En futuras actualizaciones, planeamos agregar más características, como soporte para bases de datos remotas y otros tipos de operaciones.
 
 ## Licencia
 
